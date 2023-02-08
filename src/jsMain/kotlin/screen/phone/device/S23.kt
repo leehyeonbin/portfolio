@@ -141,7 +141,6 @@ fun PhoneStatus() {
         style {
             right(0.px)
             width(100.px)
-            backgroundColor(blue)
             position(Position.Absolute)
         }
     }){
