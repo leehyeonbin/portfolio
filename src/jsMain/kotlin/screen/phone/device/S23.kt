@@ -10,9 +10,8 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
 import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H3
-import org.jetbrains.compose.web.dom.Text
 import screen.phone.device.feature.Clock
+import ui.component.ClockComponent
 
 
 @Composable
@@ -20,7 +19,7 @@ fun S23() {
 
     Div(attrs = {
         style {
-            borderRadius(68.px)
+            borderRadius(40.px)
             backgroundColor(black)
             height(760.px)
             width(360.px)
@@ -33,7 +32,7 @@ fun S23() {
     }) {
         Div(attrs = {
             style {
-                borderRadius(67.px)
+                borderRadius(39.px)
                 width(100.percent - 4.px)
                 height(100.percent - 4.px)
                 border {
@@ -45,7 +44,7 @@ fun S23() {
         }) {
             Div(attrs = {
                 style {
-                    borderRadius(66.px)
+                    borderRadius(38.px)
                     width(100.percent - 4.px)
                     height(100.percent - 4.px)
                     border {
@@ -57,7 +56,7 @@ fun S23() {
             }) {
                 Div(attrs = {
                     style {
-                        borderRadius(65.px)
+                        borderRadius(37.px)
                         width(100.percent - 4.px)
                         height(100.percent - 4.px)
                         border {
@@ -69,7 +68,7 @@ fun S23() {
                 }) {
                     Div(attrs = {
                         style {
-                            borderRadius(64.px)
+                            borderRadius(37.px)
                             width(100.percent - 4.px)
                             height(100.percent - 4.px)
                             border {
@@ -91,6 +90,7 @@ fun S23() {
                                 backgroundImage("url($backgroundImage)")
                                 backgroundPosition("center")
                                 backgroundSize("cover")
+                                position(Position.Relative)
                             }
                         }) {
                             StatusBar()
@@ -104,7 +104,16 @@ fun S23() {
 
 @Composable
 fun StatusBar() {
-    ClockReceiver()
+    Div(attrs = {
+        style {
+            width(100.percent - 60.px)
+            position(Position.Absolute)
+            marginLeft(30.px)
+            marginTop(10.px)
+        }
+    }) {
+        ClockReceiver()
+    }
 }
 
 @Composable
@@ -112,19 +121,13 @@ fun ClockReceiver() {
     val time = remember {
         mutableStateOf("0:0")
     }
-    rememberCoroutineScope().launch{
+    rememberCoroutineScope().launch {
         Clock().distinctUntilChanged().collect {
             time.value = it
             console.log(it)
         }
     }
-    H3 (attrs = {
-        style {
-            color(Color.white)
-        }
-    }) {
-        Text(time.value)
-    }
+    ClockComponent(time.value)
 }
 
 @Composable
