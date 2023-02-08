@@ -9,9 +9,12 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
+import org.jetbrains.compose.web.css.Color.blue
 import org.jetbrains.compose.web.dom.Div
+import screen.phone.Phone
 import screen.phone.device.feature.Clock
 import ui.component.ClockComponent
+import ui.component.WifiIcon
 
 
 @Composable
@@ -113,6 +116,7 @@ fun StatusBar() {
         }
     }) {
         ClockReceiver()
+        PhoneStatus()
     }
 }
 
@@ -128,6 +132,20 @@ fun ClockReceiver() {
         }
     }
     ClockComponent(time.value)
+}
+
+@Composable
+fun PhoneStatus() {
+    Div (attrs = {
+        style {
+            right(0.px)
+            width(100.px)
+            backgroundColor(blue)
+            position(Position.Absolute)
+        }
+    }){
+        WifiIcon()
+    }
 }
 
 @Composable
