@@ -14,6 +14,7 @@ import org.jetbrains.compose.web.dom.Div
 import screen.phone.Phone
 import screen.phone.device.feature.Clock
 import ui.component.ClockComponent
+import ui.component.FrequencyIcon
 import ui.component.WifiIcon
 
 
@@ -145,6 +146,7 @@ fun PhoneStatus() {
         }
     }){
         WifiIcon()
+        FrequencyIcon()
     }
 }
 
