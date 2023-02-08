@@ -84,7 +84,7 @@ fun S23() {
                             style {
                                 marginLeft(2.px)
                                 marginTop(2.px)
-                                borderRadius(63.px)
+                                borderRadius(40.px)
                                 width(100.percent - 4.px)
                                 height(100.percent - 4.px)
                                 backgroundImage("url($backgroundImage)")
@@ -108,8 +108,8 @@ fun StatusBar() {
         style {
             width(100.percent - 60.px)
             position(Position.Absolute)
-            marginLeft(30.px)
-            marginTop(10.px)
+            paddingLeft(30.px)
+            paddingTop(10.px)
         }
     }) {
         ClockReceiver()
