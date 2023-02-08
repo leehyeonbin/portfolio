@@ -1,14 +1,23 @@
 package screen.phone.device
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
-import org.jetbrains.compose.web.dom.ContentBuilder
 import org.jetbrains.compose.web.dom.Div
-import org.w3c.dom.HTMLDivElement
+import org.jetbrains.compose.web.dom.H1
+import org.jetbrains.compose.web.dom.Text
+import screen.phone.device.feature.Clock
+
 
 @Composable
 fun S23() {
+
     Div(attrs = {
         style {
             borderRadius(68.px)
@@ -84,11 +93,27 @@ fun S23() {
                                 backgroundSize("cover")
                             }
                         }) {
-
+                            val time = remember {
+                                mutableStateOf("0:0")
+                            }
+                            rememberCoroutineScope().launch{
+                                Clock().distinctUntilChanged().collect {
+                                    time.value = it
+                                    console.log(it)
+                                }
+                            }
+                            H1 {
+                                Text(time.value)
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+@Composable
+fun Camera() {
+
 }
