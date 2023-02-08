@@ -13,6 +13,7 @@ import org.jetbrains.compose.web.css.Color.blue
 import org.jetbrains.compose.web.dom.Div
 import screen.phone.Phone
 import screen.phone.device.feature.Clock
+import ui.component.BatteryIcon
 import ui.component.ClockComponent
 import ui.component.FrequencyIcon
 import ui.component.WifiIcon
@@ -140,13 +141,14 @@ fun PhoneStatus() {
     Div (attrs = {
         style {
             right(0.px)
-            width(100.px)
+            width(50.px)
             position(Position.Absolute)
-            top(5.px)
+            top(10.px)
         }
     }){
         WifiIcon()
         FrequencyIcon()
+        BatteryIcon()
     }
 }
 
