@@ -3,8 +3,9 @@ package screen.phone.device
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
-import org.jetbrains.compose.web.css.Color.white
+import org.jetbrains.compose.web.dom.ContentBuilder
 import org.jetbrains.compose.web.dom.Div
+import org.w3c.dom.HTMLDivElement
 
 @Composable
 fun S23() {
@@ -76,8 +77,9 @@ fun S23() {
                                 borderRadius(63.px)
                                 width(100.percent - 4.px)
                                 height(100.percent - 4.px)
-                                backgroundColor(white)
-//                                backgroundImage("https://user-images.githubusercontent.com/74440939/217517235-98eca9ea-9092-4e03-b54f-9b3f0771a780.jpeg")
+                                backgroundImage("url(https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80)")
+                                backgroundPosition("center")
+                                backgroundSize("cover")
                             }
                         }) {
 
