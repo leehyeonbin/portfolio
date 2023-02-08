@@ -9,8 +9,9 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
+import org.jetbrains.compose.web.css.Color.white
 import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H1
+import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.Text
 import screen.phone.device.feature.Clock
 
@@ -93,23 +94,37 @@ fun S23() {
                                 backgroundSize("cover")
                             }
                         }) {
-                            val time = remember {
-                                mutableStateOf("0:0")
-                            }
-                            rememberCoroutineScope().launch{
-                                Clock().distinctUntilChanged().collect {
-                                    time.value = it
-                                    console.log(it)
-                                }
-                            }
-                            H1 {
-                                Text(time.value)
-                            }
+                            StatusBar()
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@Composable
+fun StatusBar() {
+    ClockComponent()
+}
+
+@Composable
+fun ClockComponent() {
+    val time = remember {
+        mutableStateOf("0:0")
+    }
+    rememberCoroutineScope().launch{
+        Clock().distinctUntilChanged().collect {
+            time.value = it
+            console.log(it)
+        }
+    }
+    H3 (attrs = {
+        style {
+            color(white)
+        }
+    }) {
+        Text(time.value)
     }
 }
 
