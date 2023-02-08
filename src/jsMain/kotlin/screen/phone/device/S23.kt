@@ -70,6 +70,8 @@ fun S23() {
                             }
                         }
                     }) {
+                        val backgroundImage =
+                            "https://r1.community.samsung.com/t5/image/serverpage/image-id/6154775i034DD4C88767F1B5/image-dimensions/2500?v=v2&px=-1"
                         Div(attrs = {
                             style {
                                 marginLeft(2.px)
@@ -77,7 +79,7 @@ fun S23() {
                                 borderRadius(63.px)
                                 width(100.percent - 4.px)
                                 height(100.percent - 4.px)
-                                backgroundImage("url(https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80)")
+                                backgroundImage("url($backgroundImage)")
                                 backgroundPosition("center")
                                 backgroundSize("cover")
                             }
