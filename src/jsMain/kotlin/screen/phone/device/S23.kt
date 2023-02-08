@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.Color.black
-import org.jetbrains.compose.web.css.Color.white
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.Text
@@ -105,11 +104,11 @@ fun S23() {
 
 @Composable
 fun StatusBar() {
-    ClockComponent()
+    ClockReceiver()
 }
 
 @Composable
-fun ClockComponent() {
+fun ClockReceiver() {
     val time = remember {
         mutableStateOf("0:0")
     }
@@ -121,7 +120,7 @@ fun ClockComponent() {
     }
     H3 (attrs = {
         style {
-            color(white)
+            color(Color.white)
         }
     }) {
         Text(time.value)
