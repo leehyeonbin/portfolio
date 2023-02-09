@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import screen.phone.device.StatusBar
+import screen.phone.display.app.BottomApps
 import ui.component.Camera
 
 @Composable
@@ -38,6 +39,7 @@ fun DisplayScreen() {
         }) {
             StatusBar()
             Camera()
+            BottomApps()
         }
     }
 }
