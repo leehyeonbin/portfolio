@@ -142,7 +142,7 @@ fun PhoneStatus() {
             right(0.px)
             width(50.px)
             position(Position.Absolute)
-            top(10.px)
+            top(5.px)
         }
     }) {
         WifiIcon()
