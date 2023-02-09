@@ -13,10 +13,7 @@ import org.jetbrains.compose.web.css.Color.blue
 import org.jetbrains.compose.web.dom.Div
 import screen.phone.Phone
 import screen.phone.device.feature.Clock
-import ui.component.BatteryIcon
-import ui.component.ClockComponent
-import ui.component.FrequencyIcon
-import ui.component.WifiIcon
+import ui.component.*
 
 
 @Composable
@@ -96,9 +93,11 @@ fun S23() {
                                 backgroundPosition("center")
                                 backgroundSize("cover")
                                 position(Position.Relative)
+                                textAlign("center")
                             }
                         }) {
                             StatusBar()
+                            Camera()
                         }
                     }
                 }
@@ -138,21 +137,16 @@ fun ClockReceiver() {
 
 @Composable
 fun PhoneStatus() {
-    Div (attrs = {
+    Div(attrs = {
         style {
             right(0.px)
             width(50.px)
             position(Position.Absolute)
             top(10.px)
         }
-    }){
+    }) {
         WifiIcon()
         FrequencyIcon()
         BatteryIcon()
     }
-}
-
-@Composable
-fun Camera() {
-
 }
