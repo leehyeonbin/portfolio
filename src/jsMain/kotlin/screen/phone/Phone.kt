@@ -11,11 +11,12 @@ import screen.phone.device.S23
 fun Phone() {
     Div (attrs = {
         style {
-            right(0.px)
+
             animation(keyframesName = "phone-move", builder = {
                 duration(1.s)
             })
-            position(Position.Fixed)
+            position(Position.Absolute)
+            right(0.px)
             CSSKeyframesBuilder {
                 from {
                     transform {
