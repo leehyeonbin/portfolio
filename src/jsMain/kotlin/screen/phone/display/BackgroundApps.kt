@@ -19,11 +19,11 @@ fun BackgroundApps() {
         }
     }) {
         val appList = listOf(
-            AppIconData(appName = "GCMS", image = ""),
-            AppIconData(appName = "AiD", image = ""),
-            AppIconData(appName = "Quicket", image = ""),
-            AppIconData(appName = "MOIZA", image = ""),
-            AppIconData(appName = "영월", image = "")
+            AppIconData(appName = "GCMS", image = "image/ic_gcms.svg"),
+            AppIconData(appName = "AiD", image = "./image/ic_aid.svg"),
+            AppIconData(appName = "Quicket", image = "./image/ic_quicket.svg"),
+            AppIconData(appName = "MOIZA", image = "./image/ic_moiza.png"),
+            AppIconData(appName = "영월", image = "./image/ic_youngwol.svg")
         )
 
         appList.forEach {

@@ -15,12 +15,14 @@ fun Apps(app: AppIconData) {
     Div (attrs = {
         style {
             textAlign("center")
+            lineHeight(0.px)
         }
     }){
         Img(src = app.image, attrs = {
             style {
                 height(40.px)
                 width(40.px)
+                borderRadius(10.px)
             }
         })
         H6 (attrs = {
