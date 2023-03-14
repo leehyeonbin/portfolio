@@ -1,11 +1,10 @@
 package ui.component
 
 import androidx.compose.runtime.Composable
-import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.css.Color.white
-import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.css.height
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.width
 import org.jetbrains.compose.web.dom.Img
-import org.w3c.dom.Image
 
 @Composable
 fun WifiIcon() {
