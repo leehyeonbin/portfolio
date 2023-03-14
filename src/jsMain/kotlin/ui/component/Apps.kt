@@ -9,20 +9,18 @@ import org.jetbrains.compose.web.dom.H6
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.dom.Text
 import screen.phone.display.app.AppIconData
+import ui.style.AppIconStyleSheet
 
 @Composable
 fun Apps(app: AppIconData) {
     Div (attrs = {
-        style {
-            textAlign("center")
-            lineHeight(0.px)
-        }
+        classes(AppIconStyleSheet.container)
     }){
         Img(src = app.image, attrs = {
             style {
-                height(40.px)
-                width(40.px)
-                borderRadius(10.px)
+                height(45.px)
+                width(45.px)
+                borderRadius(18.px)
             }
         })
         H6 (attrs = {
