@@ -11,7 +11,6 @@ import screen.phone.device.S23
 fun Phone() {
     Div (attrs = {
         style {
-
             animation(keyframesName = "phone-move", builder = {
                 duration(1.s)
             })

@@ -13,6 +13,7 @@ import ui.style.AppIconStyleSheet
 
 @Composable
 fun Apps(app: AppIconData) {
+    Style(AppIconStyleSheet)
     Div (attrs = {
         classes(AppIconStyleSheet.container)
     }){
