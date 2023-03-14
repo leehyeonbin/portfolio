@@ -2,22 +2,22 @@ package screen.main
 
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.css.Color.blue
 import org.jetbrains.compose.web.dom.Div
-import screen.phone.Phone
 
 @Composable
 fun MainScreen() {
     Div(
         attrs = {
             style {
-                width(80.percent)
-                height(100.vh)
-                left(10.percent)
-                position(Position.Relative)
+                position(Position.Absolute)
+                width(100.percent)
+                height(100.percent)
+                left(0.px)
+                top(0.px)
+                backgroundColor(Color.blue)
             }
         }
-    ) {
-        Phone()
+    ){
+
     }
 }
