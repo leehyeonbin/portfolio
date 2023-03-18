@@ -14,10 +14,10 @@ fun MainScreen() {
                 height(100.percent)
                 left(0.px)
                 top(0.px)
-                backgroundColor(Color.blue)
+                backgroundColor(Color.whitesmoke)
             }
         }
     ){
-
+        
     }
 }
