@@ -3,12 +3,13 @@ package ui.style
 import org.jetbrains.compose.web.css.*
 
 object PhoneStyleSheet : StyleSheet() {
-    val animation by keyframes {
+    private val animation by keyframes {
         from {
+            opacity(0.6)
             property("transform", "translateY(-30%)")
         }
-
         to {
+        opacity(1)
             property("transform", "translateY(0%)")
         }
     }
