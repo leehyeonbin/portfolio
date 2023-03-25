@@ -7,8 +7,7 @@ import org.jetbrains.compose.web.css.backgroundColor
 object BodyStyleSheet : StyleSheet() {
     init {
         "body" style {
-                    backgroundColor(Color.black)
-                }
+            backgroundColor(Color.black)
+        }
     }
-
 }
