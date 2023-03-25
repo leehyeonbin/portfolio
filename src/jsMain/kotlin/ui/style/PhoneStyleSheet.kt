@@ -19,8 +19,7 @@ object PhoneStyleSheet : StyleSheet() {
         right(0.px)
         animation(animation) {
             duration(1.s)
-            timingFunction(AnimationTimingFunction.EaseIn)
-//            direction(AnimationDirection.Alternate)
+            timingFunction(AnimationTimingFunction.Ease)
         }
     }
 }
