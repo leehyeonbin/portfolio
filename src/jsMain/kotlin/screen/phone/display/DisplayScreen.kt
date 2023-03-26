@@ -5,6 +5,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import screen.phone.device.StatusBar
 import screen.phone.display.app.BottomApps
+import screen.phone.display.bluetooth.BlueToothModal
 import ui.component.Camera
 
 @Composable
@@ -25,6 +26,8 @@ fun DisplayScreen() {
             "https://r1.community.samsung.com/t5/image/serverpage/image-id/6154775i034DD4C88767F1B5/image-dimensions/2500?v=v2&px=-1"
         Div(attrs = {
             style {
+                display(DisplayStyle.Flex)
+                justifyContent(JustifyContent.Center)
                 marginLeft(2.px)
                 marginTop(2.px)
                 borderRadius(40.px)
@@ -40,6 +43,7 @@ fun DisplayScreen() {
             StatusBar()
             Camera()
             BackgroundApps()
+            BlueToothModal()
             BottomApps()
         }
     }
