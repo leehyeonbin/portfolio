@@ -2,7 +2,9 @@ package screen.phone.display.bluetooth
 
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.B
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.dom.Text
 import ui.style.BlueToothStyleSheet
 
@@ -26,14 +28,14 @@ fun BlueToothModal() {
                     textAlign("left")
                 }
             }) {
-                Text("Github")
+                B { Text("Github") }
             }
             Div(attrs = {
                 style {
                     width(100.percent)
                 }
             }) {
-
+                Img(src = "url()")
             }
             Div {
 
