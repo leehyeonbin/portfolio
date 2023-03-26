@@ -16,7 +16,7 @@ object BlueToothStyleSheet : StyleSheet() {
         width(100.percent - 20.px)
         textAlign("center")
         height(35.percent)
-        borderRadius(30.px)
+        borderRadius(25.px)
         bottom(30.px)
         backgroundColor(Color.white)
         justifyContent(JustifyContent.Center)
