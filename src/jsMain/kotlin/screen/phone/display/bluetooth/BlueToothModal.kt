@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.B
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.dom.Text
 import ui.style.BlueToothStyleSheet
 
@@ -21,7 +22,6 @@ fun BlueToothModal() {
                 display(DisplayStyle.Flex)
                 justifyContent(JustifyContent.Center)
                 alignItems(AlignItems.Center)
-                backgroundColor(Color.blue)
             }
         }) {
             Div(attrs = {
@@ -41,14 +41,18 @@ fun BlueToothModal() {
                     position(Position.Absolute)
                     width(100.percent)
                     height(50.percent)
-                    backgroundColor(Color.yellow)
                     display(DisplayStyle.Flex)
                     justifyContent(JustifyContent.Center)
                     alignItems(AlignItems.Center)
                 }
             }) {
-                Text("AAAAAA")
-//                Img(src = "url()")
+                Img(src = "./image/ic_github.png", attrs = {
+                    style {
+                        height(100.px)
+                        width(100.px)
+                        borderRadius(20.px)
+                    }
+                })
             }
             Div(attrs = {
                 style {
